@@ -1,0 +1,12 @@
+.product-page {
+  padding: 30px;
+}
+
+.product-page h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.product-page p {
+  margin-bottom: 20px;
+}

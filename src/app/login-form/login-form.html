@@ -1,0 +1,74 @@
+<div class="login-container">
+
+  <h2>MY ACCOUNT</h2>
+  @if (loginError) {
+  <p class="login-error">{{ loginError }}</p>
+}
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <!-- Email field -->
+    <div class="form-group">
+
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Please type your Email Address:"
+      >   
+
+    </div>
+
+    <!-- Password field -->
+    <div class="form-group">
+      
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        placeholder="Please enter your Password:"
+      >
+
+    </div>
+
+    <!-- Forgot password -->
+    <a href="#" class="forgot-password">
+      Forgotten Your Password
+    </a>
+
+    <!-- Login button -->
+  <button type="submit">
+  Log In
+</button>
+
+  </form>
+
+  <div class="divider">
+    <span>- OR -</span>
+  </div>
+
+  <!-- Social login options -->
+  <div class="social-login">
+
+  <button type="button">
+    <span class="social-icon google-icon">G</span>
+    Sign in using Google
+  </button>
+
+  <button type="button">
+    <span class="social-icon microsoft-icon">⊞</span>
+    Sign in using Microsoft
+  </button>
+
+  <button type="button">
+    <img
+  class="social-icon apple-icon"
+  src="https://cdn.simpleicons.org/apple/555555"
+  alt="Apple"
+>
+Sign in using Apple
+  </button>
+
+</div>
+
+</div>

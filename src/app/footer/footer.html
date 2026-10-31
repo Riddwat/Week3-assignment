@@ -1,0 +1,92 @@
+
+<footer
+  [ngStyle]="{
+    'background-color': '#8f1d32',
+    'padding': '40px 20px',
+    'margin-top': '40px'
+  }"
+>
+  <div
+    class="footer-container"
+    [ngClass]="{
+      'footer-layout': true
+    }"
+  >
+
+   <!-- Empire Textiles -->
+<div class="footer-section">
+  <h3>EMPIRE TEXTILES</h3>
+
+ <div class="social-icons">
+  <span class="social-circle">
+    <img src="https://cdn.simpleicons.org/x/555555" alt="Twitter">
+  </span>
+
+  <span class="social-circle">
+    <img src="https://cdn.simpleicons.org/facebook/555555" alt="Facebook">
+  </span>
+
+  <span class="social-circle">
+    <img src="https://cdn.simpleicons.org/pinterest/555555" alt="Pinterest">
+  </span>
+
+  <span class="social-circle">
+    <img src="https://cdn.simpleicons.org/instagram/555555" alt="Instagram">
+  </span>
+</div>
+
+</div>
+
+    <!-- Categories -->
+    <div class="footer-section">
+      <h3>{{ 'categories' | titlecase }}</h3>
+
+      <ul>
+        @for (category of categories; track category) {
+          <li>
+            <a href="#">{{ category }}</a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>{{ 'quick links' | titlecase }}</h3>
+
+      <ul>
+        @for (link of quickLinks; track link) {
+          <li>
+            <a href="#">{{ link }}</a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-section">
+      <h3>{{ 'get the newsletter' | titlecase }}</h3>
+
+      <input
+        type="email"
+        placeholder="Enter Email Address"
+      >
+
+      <button type="button">
+        Subscribe
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div
+    class="copyright"
+    [ngStyle]="{
+      'text-align': 'center',
+      'margin-top': '20px'
+    }"
+  >
+    © 2023 Empire Textiles. All rights reserved.
+  </div>
+</footer>
